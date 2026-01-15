@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MH Creation X – Daily Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg-color: #f1f5f9;
+        --text-primary: #0f172a;
+        --text-secondary: #334155;
+        --text-muted: #64748b;
+        --glass-bg: rgba(255, 255, 255, 0.85);
+        --glass-border: rgba(203, 213, 225, 0.5);
+      }
+      .dark {
+        --bg-color: #020617;
+        --text-primary: #f8fafc;
+        --text-secondary: #94a3b8;
+        --text-muted: #64748b;
+        --glass-bg: rgba(15, 23, 42, 0.75);
+        --glass-border: rgba(255, 255, 255, 0.1);
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--bg-color);
+        background-image: radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.1) 0px, transparent 50%),
+                          radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.08) 0px, transparent 50%);
+        color: var(--text-primary);
+        min-height: 100vh;
+        transition: background-color 0.5s ease;
+        overflow-x: hidden;
+      }
+      .dark body {
+        background-image: radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+                          radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.1) 0px, transparent 50%);
+      }
+      .glass {
+        background: var(--glass-bg);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border: 1px solid var(--glass-border);
+      }
+      .glass-card {
+        background: var(--glass-bg);
+        backdrop-filter: blur(20px);
+        border-radius: 2.5rem;
+        border: 1px solid var(--glass-border);
+        box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.04);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .glass-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 25px 70px -15px rgba(0, 0, 0, 0.1);
+        border-color: rgba(99, 102, 241, 0.3);
+      }
+
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: rgba(99, 102, 241, 0.2); border-radius: 10px; }
+      ::-webkit-scrollbar-thumb:hover { background: rgba(99, 102, 241, 0.4); }
+
+      @media print {
+        @page { 
+          size: A4 portrait; 
+          margin: 0; 
+        }
+        * {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+          color-adjust: exact !important;
+        }
+        html, body {
+          height: auto !important;
+          background: white !important;
+          color: black !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          overflow: visible !important;
+        }
+        
+        .no-print, .no-print * { display: none !important; }
+        
+        #root, #root > div, main, main > div {
+          display: block !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          width: 100% !important;
+          height: auto !important;
+          position: static !important;
+          background: none !important;
+          backdrop-filter: none !important;
+        }
+
+        .cash-memo-container, .print-container {
+          display: block !important;
+          width: 210mm !important;
+          min-height: 297mm !important;
+          margin: 0 auto !important;
+          padding: 15mm !important;
+          background: white !important;
+          color: black !important;
+          border: none !important;
+          box-shadow: none !important;
+          box-sizing: border-box !important;
+          position: static !important;
+          overflow: visible !important;
+        }
+
+        h1, h2, h3, h4, p, span, td, th {
+          color: black !important;
+        }
+      }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "zustand/": "https://esm.sh/zustand@^5.0.9/",
+    "zustand": "https://esm.sh/zustand@^5.0.9",
+    "framer-motion": "https://esm.sh/framer-motion@^11.1.7"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

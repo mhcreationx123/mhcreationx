@@ -1,0 +1,7 @@
+{
+  "name": "MH Creation X – Daily Project MASTER",
+  "description": "Premium project management and financial tracking system for professional graphic designers. Features secure client portals, A4 cash memo printing, and team access control. Engineered by Moazzem Hossen.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
